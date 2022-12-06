@@ -37,9 +37,9 @@ Mobile
 
 ## Links
 
-👉 Solution Frontend Mentor: [Frontend solution]()
+👉 Solution Frontend Mentor: [Frontend solution](https://www.frontendmentor.io/solutions/single-price-grid-component-iPCcnzBZqP)
 
-👉 Live Site: [Live site with GitHub Pages]()
+👉 Live Site: [Live site with GitHub Pages](https://marioferrer.github.io/FM-11_single-price-grid/)
 
 <br>
 
