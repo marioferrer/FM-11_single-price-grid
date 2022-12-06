@@ -1,0 +1,139 @@
+@use "reset";
+@import "mixins";
+
+:root {
+
+  --cyan: hsl(179, 62%, 43%);
+  --light-cyan: hsl(174, 63%, 49%);
+  --yellow: hsl(71, 73%, 54%);
+  --white: hsl(204, 43%, 93%);
+  --gray: hsl(218, 22%, 67%);
+
+  --font-size: 16px;
+  --ff: 'Karla', sans-serif;
+  --fw-400: 400;
+  --fw-700: 700;
+
+  --mobile: 375px;
+  --desktop: 1440px;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-size: 100%;
+  font-family: var(--ff);
+  background: var(--white);
+  color: var(--white);
+  display: grid;
+  place-items: center;
+
+}
+
+.container {
+  background: var(--white);
+  max-width: var(--mobile);
+  margin: 6rem 2rem;
+  border-radius: .4em;
+  overflow: hidden;
+
+  @include media {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 640px;
+    width: auto;
+  }
+
+  &>* {
+    padding: 1.6rem;
+
+    @include media {
+      padding: 2.5rem;
+    }
+  }
+}
+
+.join {
+  background: white;
+
+  @include media {
+    grid-column: 1 / span 2;
+  }
+
+  &__tittle {
+    color: var(--cyan);
+    font-weight: var(--fw-700);
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  &__subtittle {
+    color: var(--yellow);
+    margin-bottom: 2rem;
+    padding-right: 1.5rem;
+  }
+
+  &__p {
+    margin-top: 1rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+}
+
+.subs {
+  background: var(--cyan);
+
+  &__tittle {
+    font-size: 1.4em;
+    margin-bottom: 1em;
+  }
+
+  &__wrap {
+    margin-bottom: .7em;
+    @include flex (row, nowrap, flex-start, center, 0);
+  }
+
+  &__price {
+    font-weight: var(--fw-700);
+    font-size: 2em;
+    margin-right: .5em;
+  }
+
+  &__p {
+    margin-bottom: 2em;
+  }
+
+  &__btn {
+    width: 100%;
+    padding: 1em 0;
+    border-radius: .5em;
+    background-color: var(--yellow);
+    color: var(--white);
+    font-size: 1em;
+    box-shadow: 0 10px 10px hsla(217, 7%, 51%, 0.428);
+    transform: scale(1);
+    cursor: pointer;
+    transition: all .3s;
+
+    &:hover {
+      background-color: hsl(71, 62%, 50%);
+      transform: scale(1.01);
+    }
+  }
+}
+
+.why {
+  background: var(--light-cyan);
+
+  &__tittle {
+    font-size: 1.4em;
+    font-weight: var(--fw-700);
+    margin-bottom: 1em;
+  }
+
+  &__li {
+    line-height: 1.5;
+  }
+}
